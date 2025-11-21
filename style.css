@@ -160,27 +160,6 @@ h2 {
     transform: scale(1.08);
 }
 
-@media (max-width: 768px), (max-height: 600px) {
-    .index_container {
-        left: 0;
-        top: 0;
-        align-items: center;
-        text-align: center;
-        height: 100vh;
-        justify-content: center;
-        overflow: hidden;
-    }
-    .logo {
-        display: none;
-        position: relative;
-        width: 150px;
-        max-width: 80vw;
-        top: -40rem;
-        left: 0;
-        margin: 0 auto 2rem auto;
-    }
-}
-
 .img_container {
     display: flex;
     justify-content: center;
@@ -551,3 +530,154 @@ section {
   transform: scale(1.05);
 }
 
+/* hamburger */
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0px 10px;
+}
+
+.hamburger:hover {
+    background-color: #ffffff74;
+    border-radius: 10px;
+}
+
+.mobile_menu {
+  display: none;
+  font-weight: bold;
+  margin-top: 2rem;
+  flex-direction: column;
+  position: absolute;
+  z-index: 10;
+  top: 120px; 
+  right: 50%;
+  transform: translateX(50%);
+  background-color: rgba(255, 255, 255);
+  width: 70%;
+  max-width: 180px;
+  border-radius: 20px;
+  padding: 1rem;
+  gap: 1rem;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+}
+
+.mobile_menu a:active,
+.mobile_menu a:focus {
+    background-color: #f0f0f0; /* or white, whatever your hover was */
+    border-radius: 10px;
+}
+
+.mobile_menu a {
+  padding: 12px;
+  font-weight: 600;
+}
+
+.mobile_menu.open {
+  display: flex;
+}
+
+/* mobile */
+
+@media (max-width: 768px), (max-height: 600px) {
+    nav {
+    position: fixed;        
+    top: 0;
+    left: 0;
+    width: 80%;
+    display: flex;         
+    justify-content: space-between; 
+    align-items: center;    
+    padding: 2rem 3rem;     
+    z-index: 20;    
+    opacity: 0.95;        
+    }
+
+    section {
+        background-color: transparent; /* no background */
+        box-shadow: none;              /* remove border/shadow */
+        border-radius: 0;              /* remove round corners */
+        padding: 0;                    /* optional: remove spacing */
+        width: 100%;                   /* make it full width */
+    }
+
+    .blur_img {
+        display: none;
+    }
+
+    
+    #home {
+        background: none !important;
+    }
+   
+
+    .index_parent_container {
+        flex-direction: column; /* stack elements vertically */
+        height: auto; /* allow content to define height */
+        padding: 2rem 1rem; /* some breathing room */
+        gap: 2rem; /* spacing between stacked elements */
+    }
+
+    .index_container {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .home_p {
+        width: 80%; /* scale text box for mobile */
+        font-size: clamp(1rem, 4vw, 1.5rem);
+    }
+
+    .portfolio_img {
+        display: none;
+    }
+
+    .nav_container {
+        display: none;
+    }
+
+    .index_btn_container {
+        grid-template-columns: 1fr; /* stack buttons vertically */
+        gap: 1rem;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 10;
+    }
+
+    .main_board_container {
+        z-index: 1;
+        margin-top: 10rem;
+    }
+
+     .index_container {
+        left: 0;
+        top: 0;
+        align-items: center;
+        text-align: center;
+        height: 100vh;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .logo {
+        display: none;
+        position: relative;
+        width: 150px;
+        max-width: 80vw;
+        top: -40rem;
+        left: 0;
+        margin: 0 auto 2rem auto;
+    }
+    
+    .star_img {
+        display: none;
+    }
+}
